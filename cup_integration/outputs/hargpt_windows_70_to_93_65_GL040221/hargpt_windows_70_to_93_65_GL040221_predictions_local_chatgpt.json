@@ -1,0 +1,122 @@
+[
+  {
+    "window_id": 70,
+    "predicted_class": "still",
+    "reason": "low variance, gravity stable, no sustained tilt or bursts"
+  },
+  {
+    "window_id": 71,
+    "predicted_class": "still",
+    "reason": "similar to previous, small fluctuations only"
+  },
+  {
+    "window_id": 72,
+    "predicted_class": "still",
+    "reason": "continuation of low-motion regime, stable orientation"
+  },
+  {
+    "window_id": 73,
+    "predicted_class": "gesture",
+    "reason": "increase in variance, small bursts without sustained tilt"
+  },
+  {
+    "window_id": 74,
+    "predicted_class": "gesture",
+    "reason": "irregular multi-axis fluctuations, no clear drinking pattern"
+  },
+  {
+    "window_id": 75,
+    "predicted_class": "gesture",
+    "reason": "moderate motion, no stable tilt plateau"
+  },
+  {
+    "window_id": 76,
+    "predicted_class": "raise to lip",
+    "reason": "increasing variance and gradual orientation shift, z deviates from -1"
+  },
+  {
+    "window_id": 77,
+    "predicted_class": "raise to lip",
+    "reason": "continued directional change with growing tilt magnitude"
+  },
+  {
+    "window_id": 78,
+    "predicted_class": "raise to lip",
+    "reason": "stronger tilt and multi-axis coordination"
+  },
+  {
+    "window_id": 79,
+    "predicted_class": "raise to lip",
+    "reason": "very high variance, large orientation change, no plateau yet"
+  },
+  {
+    "window_id": 80,
+    "predicted_class": "drink at lip",
+    "reason": "reduced variance after lift, orientation stabilized at tilted state"
+  },
+  {
+    "window_id": 81,
+    "predicted_class": "drink at lip",
+    "reason": "sustained tilt with relatively stable magnitude"
+  },
+  {
+    "window_id": 82,
+    "predicted_class": "return from lip",
+    "reason": "tilt reverses toward gravity, variance increases"
+  },
+  {
+    "window_id": 83,
+    "predicted_class": "return from lip",
+    "reason": "strong multi-axis change, orientation recovering toward baseline"
+  },
+  {
+    "window_id": 84,
+    "predicted_class": "gesture",
+    "reason": "post-return irregular motion without sustained tilt"
+  },
+  {
+    "window_id": 85,
+    "predicted_class": "gesture",
+    "reason": "moderate fluctuations, no structured drinking pattern"
+  },
+  {
+    "window_id": 86,
+    "predicted_class": "gesture",
+    "reason": "continued handling motion, irregular but not directional"
+  },
+  {
+    "window_id": 87,
+    "predicted_class": "still",
+    "reason": "variance drops, gravity alignment stable"
+  },
+  {
+    "window_id": 88,
+    "predicted_class": "gesture",
+    "reason": "y-axis variability increases, small lateral handling"
+  },
+  {
+    "window_id": 89,
+    "predicted_class": "gesture",
+    "reason": "irregular motion across axes, no tilt structure"
+  },
+  {
+    "window_id": 90,
+    "predicted_class": "gesture",
+    "reason": "moderate bursts, inconsistent directionality"
+  },
+  {
+    "window_id": 91,
+    "predicted_class": "gesture",
+    "reason": "continued handling motion, no plateau"
+  },
+  {
+    "window_id": 92,
+    "predicted_class": "gesture",
+    "reason": "multi-axis variation, non-drinking pattern"
+  },
+  {
+    "window_id": 93,
+    "predicted_class": "gesture",
+    "reason": "higher x/y variance but z stable, typical hand movement"
+  }
+]

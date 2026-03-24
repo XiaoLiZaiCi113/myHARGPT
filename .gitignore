@@ -1,0 +1,11 @@
+.idea
+.venv
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+acc_file_cup/
+
+# IPython
+profile_default/
+ipython_config.py

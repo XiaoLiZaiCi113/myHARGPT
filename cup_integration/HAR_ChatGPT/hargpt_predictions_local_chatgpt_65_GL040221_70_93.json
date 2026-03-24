@@ -1,0 +1,122 @@
+[
+  {
+    "window_id": 70,
+    "predicted_class": "Still",
+    "reason": "Acceleration on all axes shows small fluctuations with z remaining near −1g, indicating stable upright orientation and minimal motion."
+  },
+  {
+    "window_id": 71,
+    "predicted_class": "Still",
+    "reason": "Gravity direction remains stable and movement amplitude is very low, consistent with the cup resting."
+  },
+  {
+    "window_id": 72,
+    "predicted_class": "Still",
+    "reason": "Signals remain smooth with little variability and stable gravity orientation, suggesting no handling."
+  },
+  {
+    "window_id": 73,
+    "predicted_class": "Still",
+    "reason": "Acceleration values fluctuate only slightly while z stays near −1g, indicating the cup remains stationary."
+  },
+  {
+    "window_id": 74,
+    "predicted_class": "Still",
+    "reason": "Small variations in x and y but no meaningful change in gravity direction, consistent with a resting cup."
+  },
+  {
+    "window_id": 75,
+    "predicted_class": "Activity",
+    "reason": "Motion variability increases slightly across axes but gravity orientation remains stable, suggesting light handling without tilt."
+  },
+  {
+    "window_id": 76,
+    "predicted_class": "Activity",
+    "reason": "Moderate variability appears in x and y while z remains near −1g, indicating the cup is being moved or adjusted."
+  },
+  {
+    "window_id": 77,
+    "predicted_class": "Activity",
+    "reason": "Higher variability in horizontal axes suggests brief manipulation of the cup, but no sustained tilt is present."
+  },
+  {
+    "window_id": 78,
+    "predicted_class": "Activity",
+    "reason": "Large fluctuations in x and y indicate active handling, yet gravity orientation remains upright without drinking-like tilt."
+  },
+  {
+    "window_id": 79,
+    "predicted_class": "Activity",
+    "reason": "Movement amplitude remains elevated with irregular bursts, consistent with handling rather than drinking."
+  },
+  {
+    "window_id": 80,
+    "predicted_class": "Still",
+    "reason": "Motion intensity decreases again and gravity orientation stabilizes, suggesting the cup returns to rest."
+  },
+  {
+    "window_id": 81,
+    "predicted_class": "Still",
+    "reason": "Very low variability across axes with stable gravity vector indicates a stationary cup."
+  },
+  {
+    "window_id": 82,
+    "predicted_class": "Activity",
+    "reason": "Short bursts of variability appear on y while gravity remains stable, suggesting brief interaction with the cup."
+  },
+  {
+    "window_id": 83,
+    "predicted_class": "Activity",
+    "reason": "Moderate fluctuations in horizontal axes imply the cup is being touched or repositioned but not tilted."
+  },
+  {
+    "window_id": 84,
+    "predicted_class": "Still",
+    "reason": "Signals settle with minimal variability and consistent gravity orientation."
+  },
+  {
+    "window_id": 85,
+    "predicted_class": "Still",
+    "reason": "Acceleration remains stable with small noise around a fixed gravity direction."
+  },
+  {
+    "window_id": 86,
+    "predicted_class": "Still",
+    "reason": "Low amplitude movement and steady gravity indicate the cup remains resting."
+  },
+  {
+    "window_id": 87,
+    "predicted_class": "Still",
+    "reason": "All axes show minimal variation and no orientation change."
+  },
+  {
+    "window_id": 88,
+    "predicted_class": "Still",
+    "reason": "Small oscillations but stable gravity vector suggest the cup is not being handled."
+  },
+  {
+    "window_id": 89,
+    "predicted_class": "Still",
+    "reason": "Signal remains stable with low variability and upright gravity orientation."
+  },
+  {
+    "window_id": 90,
+    "predicted_class": "Still",
+    "reason": "Low motion intensity and consistent gravity direction indicate a resting cup."
+  },
+  {
+    "window_id": 91,
+    "predicted_class": "Drinking",
+    "reason": "Gravity orientation shifts significantly with large variability across axes, indicating the cup tilts upward in a sustained motion."
+  },
+  {
+    "window_id": 92,
+    "predicted_class": "Drinking",
+    "reason": "Strong deviation of z from −1g and high variability across axes suggest the cup remains tilted during a drinking action."
+  },
+  {
+    "window_id": 93,
+    "predicted_class": "Drinking",
+    "reason": "Orientation remains altered compared with earlier windows, with continued large motion variability consistent with finishing a drinking episode."
+  }
+]
