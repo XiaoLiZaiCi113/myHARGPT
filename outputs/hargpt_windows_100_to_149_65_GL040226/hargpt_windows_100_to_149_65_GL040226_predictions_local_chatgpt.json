@@ -1,0 +1,252 @@
+[
+  {
+    "window_id": 100,
+    "predicted_class": "Gesture",
+    "reason": "Low to moderate multi-axis variation with small reorientation changes and no stable rest plateau. The motion looks like light handling rather than a mouth-directed action."
+  },
+  {
+    "window_id": 101,
+    "predicted_class": "Still",
+    "reason": "Very small tilt range, low axis variability, and a stable gravity-dominated posture throughout. This window is closest to a resting cup state."
+  },
+  {
+    "window_id": 102,
+    "predicted_class": "Gesture",
+    "reason": "Noticeable variability, especially on one axis, with irregular low-angle motion but no sustained upward trajectory. This is more consistent with handling or gesture than drinking."
+  },
+  {
+    "window_id": 103,
+    "predicted_class": "Gesture",
+    "reason": "Moderate movement persists with elevated low-angle posture, but there is no large monotonic raise and no sustained high-angle hold. The pattern fits general cup movement."
+  },
+  {
+    "window_id": 104,
+    "predicted_class": "Gesture",
+    "reason": "Small to moderate reorientation with clear motion above rest, yet the tilt stays low and the trajectory is not strongly mouth-directed. This is best read as light gesture."
+  },
+  {
+    "window_id": 105,
+    "predicted_class": "Gesture",
+    "reason": "Similar to the adjacent windows, the signal shows modest variability and mild posture changes without a stable still pattern. It looks like continued low-intensity handling."
+  },
+  {
+    "window_id": 106,
+    "predicted_class": "Gesture",
+    "reason": "The cup remains mildly active with moderate low-angle motion and no sharp start or stop structure. This is better explained by gesture than by stillness."
+  },
+  {
+    "window_id": 107,
+    "predicted_class": "Still",
+    "reason": "The window is relatively stable, with a narrow tilt band and limited axis fluctuation. This is closer to a quiet resting hold than to active manipulation."
+  },
+  {
+    "window_id": 108,
+    "predicted_class": "Gesture",
+    "reason": "There is a broader tilt excursion than in the surrounding still windows, but it stays far below drinking angle and does not form a clean raise. This looks like irregular handling."
+  },
+  {
+    "window_id": 109,
+    "predicted_class": "Gesture",
+    "reason": "Tilt fluctuates between low and moderate values with irregular multi-axis motion. The pattern is too variable for Still and not structured enough for raise or return."
+  },
+  {
+    "window_id": 110,
+    "predicted_class": "Gesture",
+    "reason": "This window continues the moderate low-angle movement seen before the large event, with no sustained high-angle plateau. It is most consistent with gesture or repositioning."
+  },
+  {
+    "window_id": 111,
+    "predicted_class": "Raise to lips",
+    "reason": "The window starts at moderate low angle and ends with a strong, smooth climb into very large tilt near the end. That is a clear lift-toward-mouth pattern."
+  },
+  {
+    "window_id": 112,
+    "predicted_class": "Drink",
+    "reason": "A long central portion of the window stays at very large tilt well above 40 degrees, forming a sustained high-angle hold. This is the strongest drinking window in the segment."
+  },
+  {
+    "window_id": 113,
+    "predicted_class": "Return from lips",
+    "reason": "The window begins at very high tilt and then steadily drops back toward low angles. This is a clear lowering movement after a drinking hold."
+  },
+  {
+    "window_id": 114,
+    "predicted_class": "Still",
+    "reason": "After the return, the signal settles into low variability with a narrow low-angle range. The cup appears to be resting again."
+  },
+  {
+    "window_id": 115,
+    "predicted_class": "Still",
+    "reason": "Small axis standard deviations and a compact tilt profile indicate a stable posture. There is no meaningful event-like motion here."
+  },
+  {
+    "window_id": 116,
+    "predicted_class": "Still",
+    "reason": "The pattern remains quiet and gravity-dominated, with only minor fluctuations. This is consistent with a stationary cup."
+  },
+  {
+    "window_id": 117,
+    "predicted_class": "Still",
+    "reason": "Low motion intensity and a narrow angle band persist through the window. The signal is characteristic of rest rather than active movement."
+  },
+  {
+    "window_id": 118,
+    "predicted_class": "Still",
+    "reason": "One of the quieter windows in this segment, with very limited tilt and axis variability. This is strong evidence of stillness."
+  },
+  {
+    "window_id": 119,
+    "predicted_class": "Still",
+    "reason": "Extremely stable axis relationships and very small fluctuations indicate a resting posture. No gesture-like burst or directed movement is visible."
+  },
+  {
+    "window_id": 120,
+    "predicted_class": "Still",
+    "reason": "The cup holds a nearly fixed orientation with minimal movement. This is clearly a still window."
+  },
+  {
+    "window_id": 121,
+    "predicted_class": "Still",
+    "reason": "The signal stays compact and low-amplitude with no event structure. This remains within a quiet resting segment."
+  },
+  {
+    "window_id": 122,
+    "predicted_class": "Still",
+    "reason": "Slightly more variation than the quietest windows, but the motion is still small and not directional. The best label is Still."
+  },
+  {
+    "window_id": 123,
+    "predicted_class": "Still",
+    "reason": "The posture remains stable with low tilt dispersion and limited multi-axis change. This is a resting hold."
+  },
+  {
+    "window_id": 124,
+    "predicted_class": "Still",
+    "reason": "Low-intensity signal and narrow tilt range continue without any clear action onset. The cup appears stationary."
+  },
+  {
+    "window_id": 125,
+    "predicted_class": "Still",
+    "reason": "The window shows only minor fluctuations around a fixed orientation. This remains a still period."
+  },
+  {
+    "window_id": 126,
+    "predicted_class": "Still",
+    "reason": "Very modest axis variation and a stable low-angle posture dominate the window. No meaningful manipulation is evident."
+  },
+  {
+    "window_id": 127,
+    "predicted_class": "Still",
+    "reason": "The signal is quiet and compact, with no strong irregular bursts or monotonic raise pattern. This is consistent with stillness."
+  },
+  {
+    "window_id": 128,
+    "predicted_class": "Still",
+    "reason": "Another very stable window with low movement intensity and a narrow tilt band. This is clearly Still."
+  },
+  {
+    "window_id": 129,
+    "predicted_class": "Still",
+    "reason": "There is a little more angle spread than in the quietest windows, but the overall posture remains stable and low-energy. Still fits best."
+  },
+  {
+    "window_id": 130,
+    "predicted_class": "Gesture",
+    "reason": "Movement increases relative to the preceding still stretch, with broader low-angle variation and more visible handling. It does not yet form a clear raise."
+  },
+  {
+    "window_id": 131,
+    "predicted_class": "Gesture",
+    "reason": "The window shows moderate low-angle activity and a gradual build in motion, but without a decisive mouth-directed lift. This is better treated as gesture or repositioning."
+  },
+  {
+    "window_id": 132,
+    "predicted_class": "Gesture",
+    "reason": "Mild to moderate movement continues, with low to mid tilt but no large-angle transition. This remains handling rather than drinking."
+  },
+  {
+    "window_id": 133,
+    "predicted_class": "Raise to lips",
+    "reason": "Most of the window is low-angle, then the tilt rises sharply in the final portion and crosses 40 degrees. This is a clear lift-to-mouth transition."
+  },
+  {
+    "window_id": 134,
+    "predicted_class": "Drink",
+    "reason": "This window contains a long sustained high-angle segment well above 40 degrees, reaching deep into drinking posture. That stable elevated hold matches Drink."
+  },
+  {
+    "window_id": 135,
+    "predicted_class": "Return from lips",
+    "reason": "The window starts high and then declines steadily back toward low angles. This is a lowering phase immediately after drinking."
+  },
+  {
+    "window_id": 136,
+    "predicted_class": "Still",
+    "reason": "After the return, the signal settles again into a quiet low-angle state with limited variability. This is most consistent with rest."
+  },
+  {
+    "window_id": 137,
+    "predicted_class": "Still",
+    "reason": "Low axis variability and a narrow tilt band dominate the window. There is no event-like structure or irregular burst."
+  },
+  {
+    "window_id": 138,
+    "predicted_class": "Still",
+    "reason": "The cup remains in a stable posture with only small fluctuations. This window belongs to the post-event still segment."
+  },
+  {
+    "window_id": 139,
+    "predicted_class": "Still",
+    "reason": "Motion is minimal and the orientation remains steady. This is a quiet resting hold."
+  },
+  {
+    "window_id": 140,
+    "predicted_class": "Still",
+    "reason": "Very small axis spread and a compact tilt range indicate strong stability. The cup is effectively at rest."
+  },
+  {
+    "window_id": 141,
+    "predicted_class": "Still",
+    "reason": "One of the most stable windows in this group, with very low movement intensity. This clearly fits Still."
+  },
+  {
+    "window_id": 142,
+    "predicted_class": "Still",
+    "reason": "The signal remains tightly clustered and low-energy, with no signs of directed transport or gesture bursts. Still is the best match."
+  },
+  {
+    "window_id": 143,
+    "predicted_class": "Still",
+    "reason": "The window continues the stable resting pattern with negligible variation. There is no evidence of active manipulation."
+  },
+  {
+    "window_id": 144,
+    "predicted_class": "Still",
+    "reason": "Slightly more movement than the quietest windows, but the posture remains stable and low-angle overall. This is still closer to rest than to gesture."
+  },
+  {
+    "window_id": 145,
+    "predicted_class": "Gesture",
+    "reason": "Motion becomes more active again, with broader tilt fluctuation and moderate multi-axis variability, but without a clear raise or high-angle hold. This looks like handling."
+  },
+  {
+    "window_id": 146,
+    "predicted_class": "Gesture",
+    "reason": "Sustained moderate movement and repeated low-to-mid tilt changes are present, but the action stays well below drinking angle. Gesture fits best."
+  },
+  {
+    "window_id": 147,
+    "predicted_class": "Gesture",
+    "reason": "The signal remains active with moderate variability and irregular orientation changes. It is too dynamic for Still and too shallow for Drink."
+  },
+  {
+    "window_id": 148,
+    "predicted_class": "Gesture",
+    "reason": "This is a more vigorous handling window with larger axis variability and stronger low-to-mid angle motion, but no sustained mouth-level posture. It is best labeled Gesture."
+  },
+  {
+    "window_id": 149,
+    "predicted_class": "Gesture",
+    "reason": "The final window continues the active handling pattern, with broad moderate tilt changes and no stable high-angle plateau. This is not Drink and is most consistent with Gesture."
+  }
+]

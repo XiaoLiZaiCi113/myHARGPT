@@ -1,0 +1,45 @@
+You are an expert of IMU-based human activity analysis.
+
+I will give you raw motion sensor data from a smart cup.
+The device contains an accelerometer only.
+The device moves with the cup rather than being worn on the body.
+The sampling rate is 50 Hz.
+
+Your task is to recognize the most likely activity of each window from the raw sensor sequences.
+
+Candidate classes (use these exact labels):
+- Still
+- Gesture
+- Nodding
+- Raise to lips
+- Drink
+- Return from lips
+- Uncertain
+
+Please analyze the raw accelerometer data step by step.
+For each window:
+
+Analyze the accelerometer signal carefully and reason about the motion patterns before choosing a class.
+
+Your reasoning should emerge from the data itself. Consider aspects such as:
+overall motion intensity
+variability of acceleration
+relationships between x, y, and z axes
+tilt angle
+mean/std of each axis
+stability or changes in gravity orientation
+whether movement is smooth, bursty, or irregular
+whether the motion is consistent with hand switch, gesture, nodding, raise to lips, drink at lips, or return from lips
+use uncertain when the evidence is ambiguous or mixed
+Use temporal continuity across adjacent windows if it helps interpret the motion, but make a separate classification for each window.
+
+Explain briefly how the observed sensor patterns support the chosen class.
+Use temporal continuity across adjacent windows when helpful, but output one label for each window separately.
+Focus on overall motion intensity, changes across x/y/z axes, whether the movement is smooth or bursty, and whether there is a sustained directional change consistent with drinking.
+
+For drink consider only large angles (>40)
+
+Return exactly one JSON array with one object per window:
+[{"window_id":0,"predicted_class":"<class>","reason":"<brief explanation>"}]
+Return in JSON file format.
+Do not use code script to extract statistical values and still process the data directly

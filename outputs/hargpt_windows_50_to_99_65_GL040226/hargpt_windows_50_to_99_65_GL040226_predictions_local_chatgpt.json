@@ -1,0 +1,252 @@
+[
+  {
+    "window_id": 50,
+    "predicted_class": "Raise to lips",
+    "reason": "Mostly stable early, then shows a clear late upward reorientation with x increasing, z becoming less dominant, and tilt rising from a low baseline to about 18 to 22 degrees. This looks like the start of lifting the cup toward the face."
+  },
+  {
+    "window_id": 51,
+    "predicted_class": "Raise to lips",
+    "reason": "Strong transition window. Axis means shift clearly, variability is high, and tilt grows from near-neutral to a sustained moderate elevation around the end. This is consistent with continued upward cup transport."
+  },
+  {
+    "window_id": 52,
+    "predicted_class": "Uncertain",
+    "reason": "The cup stays in a moderately tilted posture with relatively low variability, but the angle remains well below the >40 degree drink criterion. It looks like held orientation, but not a confident drink phase."
+  },
+  {
+    "window_id": 53,
+    "predicted_class": "Uncertain",
+    "reason": "Sustained moderate tilt with low to moderate motion and no sharp onset or return pattern. The posture is stable, but the angle is too small for Drink and the phase boundary is unclear."
+  },
+  {
+    "window_id": 54,
+    "predicted_class": "Uncertain",
+    "reason": "Moderate tilt persists with some smooth drift and modest axis variability. This looks like holding the cup in an elevated orientation, but not enough angle for Drink and not a clean raise or return."
+  },
+  {
+    "window_id": 55,
+    "predicted_class": "Uncertain",
+    "reason": "The window remains moderately tilted and fairly stable. Motion is present but not strongly bursty, and the angle does not approach a convincing drinking posture. Best treated as ambiguous elevated holding."
+  },
+  {
+    "window_id": 56,
+    "predicted_class": "Return from lips",
+    "reason": "Tilt decreases across the window from a higher moderate level toward a lower resting orientation, with a corresponding change in axis balance. This is most consistent with lowering the cup."
+  },
+  {
+    "window_id": 57,
+    "predicted_class": "Return from lips",
+    "reason": "Clear downward trend in tilt from the high teens toward low single digits, combined with high variability during the descent. This matches a return or lowering movement."
+  },
+  {
+    "window_id": 58,
+    "predicted_class": "Gesture",
+    "reason": "Irregular, bursty multi-axis motion with moderate angle changes but no sustained monotonic raise or stable high-angle hold. The pattern looks more like expressive handling than drinking."
+  },
+  {
+    "window_id": 59,
+    "predicted_class": "Gesture",
+    "reason": "High variability across all axes, repeated abrupt angle excursions, and no clear stable raised posture. This is more consistent with irregular cup gesture or handling."
+  },
+  {
+    "window_id": 60,
+    "predicted_class": "Return from lips",
+    "reason": "The first half contains elevated tilt, then the signal relaxes toward a lower orientation with reduced angle by the end. This fits the tail of a lowering phase."
+  },
+  {
+    "window_id": 61,
+    "predicted_class": "Gesture",
+    "reason": "Small to moderate motion with some oscillation, but without a strong periodic nodding signature or a large drinking trajectory. It looks like light handling."
+  },
+  {
+    "window_id": 62,
+    "predicted_class": "Gesture",
+    "reason": "Low to moderate variability and mild angle changes are present, but there is no sustained high-angle phase and no clear stillness either. Best interpreted as small handling movement."
+  },
+  {
+    "window_id": 63,
+    "predicted_class": "Raise to lips",
+    "reason": "This window contains a strong, smooth ramp in tilt from low values up past 40 degrees and into the 70 degree range, with large coordinated axis change. This is a classic lift-to-mouth pattern."
+  },
+  {
+    "window_id": 64,
+    "predicted_class": "Drink",
+    "reason": "The middle of the window holds a large sustained tilt well above 40 degrees, reaching the low 70s, before starting to come down. That stable high-angle plateau matches a drink phase."
+  },
+  {
+    "window_id": 65,
+    "predicted_class": "Return from lips",
+    "reason": "Starts at very high tilt near 70 degrees and then steadily drops back toward low angles. The overall trajectory is a clear lowering phase after drinking."
+  },
+  {
+    "window_id": 66,
+    "predicted_class": "Still",
+    "reason": "Low standard deviation on all axes, narrow magnitude range, and tilt remaining small and stable. This is a resting cup posture."
+  },
+  {
+    "window_id": 67,
+    "predicted_class": "Still",
+    "reason": "Very low variability and nearly constant axis means with only minor tilt fluctuation. The cup appears stationary."
+  },
+  {
+    "window_id": 68,
+    "predicted_class": "Still",
+    "reason": "This is one of the quietest windows. All axes are steady and tilt stays in a narrow low range. Strong evidence of stillness."
+  },
+  {
+    "window_id": 69,
+    "predicted_class": "Still",
+    "reason": "Low dispersion, stable gravity-dominated orientation, and no meaningful bursts or directional transition. The cup is at rest."
+  },
+  {
+    "window_id": 70,
+    "predicted_class": "Still",
+    "reason": "Consistently low motion intensity and small tilt changes with stable axis relationships. This matches a stationary hold or table rest."
+  },
+  {
+    "window_id": 71,
+    "predicted_class": "Still",
+    "reason": "Small axis standard deviations and no clear directional event. The signal stays close to a fixed orientation throughout."
+  },
+  {
+    "window_id": 72,
+    "predicted_class": "Still",
+    "reason": "Minor fluctuations only. The cup orientation remains stable and low-angle, with no strong burst or transport pattern."
+  },
+  {
+    "window_id": 73,
+    "predicted_class": "Still",
+    "reason": "Mostly gravity-dominated, low-amplitude motion with modest drift only. This is still closer to rest than to active gesture."
+  },
+  {
+    "window_id": 74,
+    "predicted_class": "Still",
+    "reason": "Low movement intensity and steady low-angle posture. No sustained transition or irregular bursts are visible."
+  },
+  {
+    "window_id": 75,
+    "predicted_class": "Still",
+    "reason": "Axis values remain tightly clustered and tilt stays low. The window is consistent with a stable resting state."
+  },
+  {
+    "window_id": 76,
+    "predicted_class": "Gesture",
+    "reason": "Motion increases relative to the surrounding still windows, with a modest rise in tilt and broader axis spread. This looks like light cup handling rather than pure rest."
+  },
+  {
+    "window_id": 77,
+    "predicted_class": "Gesture",
+    "reason": "Variability is higher than the still segment and there are moderate angle excursions, but no strong lift-to-mouth trajectory. Best fit is mild gesture."
+  },
+  {
+    "window_id": 78,
+    "predicted_class": "Gesture",
+    "reason": "Moderate multi-axis movement and a late angle increase are present, but the trajectory is not a clean monotonic raise and never reaches drinking angle. This looks like active handling."
+  },
+  {
+    "window_id": 79,
+    "predicted_class": "Raise to lips",
+    "reason": "The window begins low and then progressively climbs into a sustained higher moderate tilt near the end, with coordinated axis shift. This is consistent with lifting the cup upward."
+  },
+  {
+    "window_id": 80,
+    "predicted_class": "Uncertain",
+    "reason": "The cup remains in an elevated moderate tilt for much of the window, but the angle stays far below the drink threshold. It resembles held near-mouth posture, but not a confident drink phase."
+  },
+  {
+    "window_id": 81,
+    "predicted_class": "Uncertain",
+    "reason": "Sustained moderate tilt with low to moderate variability and no decisive onset or descent boundary. The posture is elevated, but too shallow for Drink."
+  },
+  {
+    "window_id": 82,
+    "predicted_class": "Uncertain",
+    "reason": "Stable moderate tilt persists with relatively smooth motion. The pattern is not still, but it also does not show a valid drinking plateau above 40 degrees."
+  },
+  {
+    "window_id": 83,
+    "predicted_class": "Uncertain",
+    "reason": "The signal shows maintained elevated orientation with modest fluctuations. This suggests a held posture, but the semantic phase is ambiguous because the angle is too low for Drink."
+  },
+  {
+    "window_id": 84,
+    "predicted_class": "Uncertain",
+    "reason": "Another sustained moderately tilted window with limited burstiness. It does not look like pure gesture, but it also does not meet the large-angle drink condition."
+  },
+  {
+    "window_id": 85,
+    "predicted_class": "Uncertain",
+    "reason": "The cup remains elevated and fairly stable, with only small internal variations. This is best treated as ambiguous elevated holding."
+  },
+  {
+    "window_id": 86,
+    "predicted_class": "Return from lips",
+    "reason": "Although there is one brief spike, the overall trend is downward from a moderately elevated posture toward lower angles by the end. This is most consistent with lowering the cup."
+  },
+  {
+    "window_id": 87,
+    "predicted_class": "Return from lips",
+    "reason": "Tilt clearly declines across the window from moderate values toward near-rest, with substantial motion during the descent. This matches a return phase."
+  },
+  {
+    "window_id": 88,
+    "predicted_class": "Gesture",
+    "reason": "Irregular low to moderate angle oscillations and multi-axis variability appear, but there is no strong monotonic raise, no high-angle hold, and no clear stillness. This looks like general handling."
+  },
+  {
+    "window_id": 89,
+    "predicted_class": "Gesture",
+    "reason": "Contains moderate early tilt and continued small irregular motion, but the pattern is not stable enough for Still and not large enough for Drink. Best interpreted as cup gesture."
+  },
+  {
+    "window_id": 90,
+    "predicted_class": "Gesture",
+    "reason": "The signal shows a gradual small reorientation and mild movement, but without a decisive mouth-directed lift or sustained plateau. This fits light handling."
+  },
+  {
+    "window_id": 91,
+    "predicted_class": "Still",
+    "reason": "Low axis variability and a fairly stable orientation dominate the window. The cup seems to be resting in a mildly tilted position."
+  },
+  {
+    "window_id": 92,
+    "predicted_class": "Still",
+    "reason": "Motion remains low and the tilt profile is narrow and steady. This is consistent with a quiet resting posture."
+  },
+  {
+    "window_id": 93,
+    "predicted_class": "Still",
+    "reason": "Small fluctuations only, with stable mean axes and no event-like transition. The cup appears stationary."
+  },
+  {
+    "window_id": 94,
+    "predicted_class": "Gesture",
+    "reason": "Variability rises relative to the preceding still windows, with modest angle changes and more noticeable handling. This is better explained as gesture than rest."
+  },
+  {
+    "window_id": 95,
+    "predicted_class": "Gesture",
+    "reason": "There is clear irregular movement, especially in z and y variability, but no clean sustained lift or high-angle hold. This looks like active cup manipulation."
+  },
+  {
+    "window_id": 96,
+    "predicted_class": "Raise to lips",
+    "reason": "The window gradually builds toward higher moderate tilt, ending with a stronger upward orientation and increased coordinated motion. This is most consistent with a lift phase."
+  },
+  {
+    "window_id": 97,
+    "predicted_class": "Uncertain",
+    "reason": "The window contains elevated moderate tilt and a brief peak near 20 degrees, but it lacks a clear monotonic raise or clear return, and it remains below the drink threshold. Best treated as ambiguous."
+  },
+  {
+    "window_id": 98,
+    "predicted_class": "Raise to lips",
+    "reason": "Despite internal variation, the late part of the window shows a renewed upward reorientation with tilt climbing into the 20 to 25 degree range. This fits another lifting movement."
+  },
+  {
+    "window_id": 99,
+    "predicted_class": "Return from lips",
+    "reason": "The window begins at a higher moderate tilt and then trends downward toward near-rest by the end, with reduced angle and stabilization. This matches lowering the cup."
+  }
+]

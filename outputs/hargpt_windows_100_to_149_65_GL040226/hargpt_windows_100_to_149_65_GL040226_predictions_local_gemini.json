@@ -1,0 +1,252 @@
+[
+  {
+    "window_id": 50,
+    "predicted_class": "Raise to lips",
+    "reason": "Tilt angle increases from near 0 to 22 degrees, indicating the start of a lifting motion."
+  },
+  {
+    "window_id": 51,
+    "predicted_class": "Gesture",
+    "reason": "Tilt angle fluctuates up to 22 degrees with moderate acceleration variability, consistent with hand movements."
+  },
+  {
+    "window_id": 52,
+    "predicted_class": "Gesture",
+    "reason": "Moderate tilt around 11-19 degrees with stable acceleration, suggesting holding and gesturing."
+  },
+  {
+    "window_id": 53,
+    "predicted_class": "Gesture",
+    "reason": "Stable tilt around 12-19 degrees, consistent with holding and small gestures."
+  },
+  {
+    "window_id": 54,
+    "predicted_class": "Gesture",
+    "reason": "Stable tilt angle around 11-19 degrees with moderate movement."
+  },
+  {
+    "window_id": 55,
+    "predicted_class": "Gesture",
+    "reason": "Maintains a steady tilt around 12-19 degrees, characteristic of gesturing while holding."
+  },
+  {
+    "window_id": 56,
+    "predicted_class": "Return from lips",
+    "reason": "Tilt angle drops from 18 to near 0, indicating the cup is being placed back down."
+  },
+  {
+    "window_id": 57,
+    "predicted_class": "Gesture",
+    "reason": "Quick fluctuation in tilt angle up to 21 degrees, suggesting a brief hand gesture."
+  },
+  {
+    "window_id": 58,
+    "predicted_class": "Gesture",
+    "reason": "Small tilt fluctuations between 2 and 15 degrees with low standard deviation."
+  },
+  {
+    "window_id": 59,
+    "predicted_class": "Gesture",
+    "reason": "Tilt angle spikes to 18 degrees and drops, indicating a short gesture."
+  },
+  {
+    "window_id": 60,
+    "predicted_class": "Raise to lips",
+    "reason": "Rapid increase in tilt angle up to 73 degrees, strongly indicative of lifting to drink."
+  },
+  {
+    "window_id": 61,
+    "predicted_class": "Drink",
+    "reason": "Sustained high tilt angles exceeding 40 degrees (up to 71 degrees), consistent with drinking."
+  },
+  {
+    "window_id": 62,
+    "predicted_class": "Drink",
+    "reason": "Tilt angle reaches high values over 70 degrees, confirming a drinking action."
+  },
+  {
+    "window_id": 63,
+    "predicted_class": "Return from lips",
+    "reason": "Tilt angle decreases from 16 down to 3 degrees, indicating the cup is being lowered."
+  },
+  {
+    "window_id": 64,
+    "predicted_class": "Still",
+    "reason": "Low motion intensity and stable tilt around 3-12 degrees, consistent with being stationary."
+  },
+  {
+    "window_id": 65,
+    "predicted_class": "Still",
+    "reason": "Minimal acceleration variability and stable tilt, indicating the cup is still."
+  },
+  {
+    "window_id": 66,
+    "predicted_class": "Still",
+    "reason": "Very low standard deviation in all axes and flat tilt angle."
+  },
+  {
+    "window_id": 67,
+    "predicted_class": "Still",
+    "reason": "Stable gravity orientation with minimal tilt variation."
+  },
+  {
+    "window_id": 68,
+    "predicted_class": "Still",
+    "reason": "Low motion intensity and steady tilt angle."
+  },
+  {
+    "window_id": 69,
+    "predicted_class": "Still",
+    "reason": "Consistently low tilt and minimal axis variation."
+  },
+  {
+    "window_id": 70,
+    "predicted_class": "Still",
+    "reason": "Very stable orientation and lack of bursty movement."
+  },
+  {
+    "window_id": 71,
+    "predicted_class": "Gesture",
+    "reason": "Tilt angle increases up to 30 degrees, indicating moderate hand movement."
+  },
+  {
+    "window_id": 72,
+    "predicted_class": "Gesture",
+    "reason": "Tilt angle fluctuates between 12 and 21 degrees, showing active holding."
+  },
+  {
+    "window_id": 73,
+    "predicted_class": "Gesture",
+    "reason": "Tilt angle remains elevated around 11-21 degrees, consistent with gestures."
+  },
+  {
+    "window_id": 74,
+    "predicted_class": "Still",
+    "reason": "Low motion intensity and tilt settling back to lower values."
+  },
+  {
+    "window_id": 75,
+    "predicted_class": "Still",
+    "reason": "Stable axes and low tilt variation, characteristic of resting."
+  },
+  {
+    "window_id": 76,
+    "predicted_class": "Still",
+    "reason": "Minimal acceleration variability, indicating a stationary state."
+  },
+  {
+    "window_id": 77,
+    "predicted_class": "Still",
+    "reason": "Low standard deviation and steady tilt."
+  },
+  {
+    "window_id": 78,
+    "predicted_class": "Still",
+    "reason": "No significant movement; stable gravity orientation."
+  },
+  {
+    "window_id": 79,
+    "predicted_class": "Still",
+    "reason": "Consistently low motion intensity."
+  },
+  {
+    "window_id": 80,
+    "predicted_class": "Still",
+    "reason": "Stable tilt and minimal axis fluctuations."
+  },
+  {
+    "window_id": 81,
+    "predicted_class": "Still",
+    "reason": "Flat tilt angle and very low acceleration standard deviation."
+  },
+  {
+    "window_id": 82,
+    "predicted_class": "Still",
+    "reason": "No notable motion; cup appears resting."
+  },
+  {
+    "window_id": 83,
+    "predicted_class": "Still",
+    "reason": "Very low motion intensity and stable orientation."
+  },
+  {
+    "window_id": 84,
+    "predicted_class": "Still",
+    "reason": "Steady tilt and low variance across all axes."
+  },
+  {
+    "window_id": 85,
+    "predicted_class": "Still",
+    "reason": "Minimal movement detected; steady state."
+  },
+  {
+    "window_id": 86,
+    "predicted_class": "Still",
+    "reason": "Low motion intensity with flat tilt."
+  },
+  {
+    "window_id": 87,
+    "predicted_class": "Still",
+    "reason": "Stable gravity orientation with minimal tilt variation."
+  },
+  {
+    "window_id": 88,
+    "predicted_class": "Still",
+    "reason": "Very stable orientation and lack of bursty movement."
+  },
+  {
+    "window_id": 89,
+    "predicted_class": "Still",
+    "reason": "Consistently low tilt and minimal axis variation."
+  },
+  {
+    "window_id": 90,
+    "predicted_class": "Still",
+    "reason": "Low standard deviation and steady tilt."
+  },
+  {
+    "window_id": 91,
+    "predicted_class": "Still",
+    "reason": "No significant movement; stable gravity orientation."
+  },
+  {
+    "window_id": 92,
+    "predicted_class": "Still",
+    "reason": "Minimal acceleration variability, indicating a stationary state."
+  },
+  {
+    "window_id": 93,
+    "predicted_class": "Still",
+    "reason": "Low motion intensity and steady tilt angle."
+  },
+  {
+    "window_id": 94,
+    "predicted_class": "Still",
+    "reason": "Flat tilt angle and very low acceleration standard deviation."
+  },
+  {
+    "window_id": 95,
+    "predicted_class": "Still",
+    "reason": "Stable tilt and minimal axis fluctuations."
+  },
+  {
+    "window_id": 96,
+    "predicted_class": "Still",
+    "reason": "No notable motion; cup appears resting."
+  },
+  {
+    "window_id": 97,
+    "predicted_class": "Still",
+    "reason": "Very low motion intensity and stable orientation."
+  },
+  {
+    "window_id": 98,
+    "predicted_class": "Still",
+    "reason": "Steady tilt and low variance across all axes."
+  },
+  {
+    "window_id": 99,
+    "predicted_class": "Still",
+    "reason": "Minimal movement detected; steady state."
+  }
+]
