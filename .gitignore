@@ -4,7 +4,8 @@
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 
-acc_file_cup/
+acc_files_cup/
+videos/
 
 # IPython
 profile_default/
