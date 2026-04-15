@@ -4,6 +4,7 @@ import argparse
 import json
 import math
 import subprocess
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
@@ -89,6 +90,49 @@ def probe_video_metadata(video_file: Path) -> dict[str, Any]:
     )
 
 
+def parse_creation_datetime(value: Any) -> datetime | None:
+    if value in (None, ""):
+        return None
+    text = str(value).strip()
+    if not text:
+        return None
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        return datetime.fromisoformat(text)
+    except ValueError:
+        return None
+
+
+def extract_creation_datetime(meta: dict[str, Any]) -> datetime | None:
+    format_tags = meta.get("format", {}).get("tags", {})
+    creation_dt = parse_creation_datetime(format_tags.get("creation_time"))
+    if creation_dt is not None:
+        return creation_dt
+
+    for stream in meta.get("streams", []):
+        stream_tags = stream.get("tags", {})
+        creation_dt = parse_creation_datetime(stream_tags.get("creation_time"))
+        if creation_dt is not None:
+            return creation_dt
+    return None
+
+
+def load_record_date_from_metadata_json(metadata_json: Path | str) -> date:
+    metadata_path = Path(metadata_json)
+    payload = json.loads(metadata_path.read_text(encoding="utf-8"))
+
+    resolved_record_date = payload.get("resolved_record_date")
+    if resolved_record_date:
+        return date.fromisoformat(str(resolved_record_date))
+
+    ffprobe_payload = payload.get("ffprobe", {})
+    creation_dt = extract_creation_datetime(ffprobe_payload)
+    if creation_dt is None:
+        raise ValueError(f"Could not resolve record date from metadata JSON: {metadata_path}")
+    return creation_dt.date()
+
+
 def resolve_timecode_and_fps(
     video_file: Path,
     fallback_timecode: str | None = None,
@@ -156,6 +200,7 @@ def generate_video_timecode_csv(
     fmt = meta.get("format", {})
     duration = float(fmt["duration"])
     start_pts = float(fmt.get("start_time", 0) or 0.0)
+    creation_dt = extract_creation_datetime(meta)
 
     row_count = int(math.floor(duration))
     lines = [{"sec_from_start": sec} for sec in range(row_count + 1)]
@@ -172,6 +217,8 @@ def generate_video_timecode_csv(
         "timecode_csv": str(output_csv),
         "resolved_start_timecode": start_timecode,
         "resolved_fps": fps,
+        "resolved_creation_time": creation_dt.isoformat() if creation_dt is not None else None,
+        "resolved_record_date": creation_dt.date().isoformat() if creation_dt is not None else None,
         "duration_seconds": duration,
         "start_pts_seconds": start_pts,
         "ffprobe": meta,
