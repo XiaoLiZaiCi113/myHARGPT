@@ -1,9 +1,6 @@
 .idea
 .venv
 
-.ipynb_checkpoints
-*/.ipynb_checkpoints/*
-
 acc_files_cup/
 videos/
 outputs/
@@ -12,3 +9,6 @@ weak_label/
 # IPython
 profile_default/
 ipython_config.py
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+__pycache__/
