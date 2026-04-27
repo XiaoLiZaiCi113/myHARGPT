@@ -7,6 +7,7 @@
 acc_files_cup/
 videos/
 outputs/
+weak_label/
 
 # IPython
 profile_default/
