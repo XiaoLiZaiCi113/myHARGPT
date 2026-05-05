@@ -109,7 +109,7 @@ def plot_prediction_result(artifacts: PromptArtifacts, manual_df: pd.DataFrame, 
     if manual_plot.empty:
         raise ValueError("No manual labels overlap with the selected prediction range.")
 
-    manual_plot = manual_plot.sort_values("time").reset_index(drop=True).rename(columns={"state": "manual_state", "weak_label": "manual_label"})
+    manual_plot = manual_plot.sort_values("time").reset_index(drop=True).rename(columns={"state": "manual_state"})
     manual_plot["manual_state"] = manual_plot["manual_state"].astype(int)
     acc_pred = manual_plot[["time", "manual_state", "manual_label"]].copy()
     acc_pred["predicted_state"] = LABEL_TO_STATE["Still"]
@@ -206,7 +206,9 @@ def plot_prediction_result(artifacts: PromptArtifacts, manual_df: pd.DataFrame, 
 
 
 def evaluate_all_predictions(artifacts: PromptArtifacts) -> dict[tuple[str, str, str], pd.DataFrame]:
-    manual_df = pd.read_csv(artifacts.prepared.config.weak_label_output)
+    if artifacts.prepared.config.manual_label_output is None:
+        raise ValueError("Manual label output path has not been initialized. Run prepare_video_aligned_data first.")
+    manual_df = pd.read_csv(artifacts.prepared.config.manual_label_output)
     manual_df["time"] = pd.to_datetime(manual_df["time"])
     prediction_results = list(iter_prediction_jsons(artifacts))
     if not prediction_results:

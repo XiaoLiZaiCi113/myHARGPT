@@ -42,5 +42,28 @@ class PipelineConfig:
         self.window_index_csv = self.output_dir / f"hargpt_window_index_{self.participant_id}_{self.video_name}.csv"
         self.acc_video_csv = self.output_dir / f"hargpt_acc_video_subset_{self.participant_id}_{self.video_name}.csv"
         self.weak_label_input = self.project_root / "weak_label" / f"{self.participant_no}.json"
-        self.weak_label_output = self.project_root / "weak_label" / f"weak_labels_{self.participant_id}_{self.video_name}.csv"
-        self.weak_label_overlay_png = self.output_dir / f"weak_labels_overlay_{self.participant_id}_{self.video_name}.png"
+        self.batch_name: str | None = None
+        self.batch_dir: Path | None = None
+        self.manual_label_dir: Path | None = None
+        self.manual_label_output: Path | None = None
+        self.manual_label_overlay_png: Path | None = None
+
+    def resolve_batch_name(self, total_window_count: int) -> str:
+        available_window_count = max(0, total_window_count - self.window_index_in_video_subset)
+        actual_prompt_window_count = min(self.prompt_window_count, available_window_count)
+        if actual_prompt_window_count <= 0:
+            raise ValueError(
+                f"Start window {self.window_index_in_video_subset} is outside the available range "
+                f"0..{max(total_window_count - 1, 0)}."
+            )
+        actual_window_end = self.window_index_in_video_subset + actual_prompt_window_count - 1
+        return f"hargpt_windows_{self.window_index_in_video_subset}_to_{actual_window_end}_{self.participant_id}_{self.video_name}"
+
+    def initialize_batch_paths(self, total_window_count: int) -> None:
+        self.batch_name = self.resolve_batch_name(total_window_count)
+        self.batch_dir = self.output_dir / self.batch_name
+        self.batch_dir.mkdir(parents=True, exist_ok=True)
+        self.manual_label_dir = self.batch_dir / "manual_labels"
+        self.manual_label_dir.mkdir(parents=True, exist_ok=True)
+        self.manual_label_output = self.manual_label_dir / f"manual_labels_{self.participant_id}_{self.video_name}.csv"
+        self.manual_label_overlay_png = self.manual_label_dir / f"manual_labels_overlay_{self.participant_id}_{self.video_name}.png"

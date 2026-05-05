@@ -30,6 +30,8 @@ def build_weak_label_csv(prepared: PreparedData) -> pd.DataFrame:
     config = prepared.config
     if not config.weak_label_input.exists():
         raise FileNotFoundError(f"Weak label file not found: {config.weak_label_input}")
+    if config.manual_label_output is None:
+        raise ValueError("Manual label output path has not been initialized. Run prepare_video_aligned_data first.")
 
     weak_segments = json.loads(config.weak_label_input.read_text(encoding="utf-8"))
     weak_df = pd.DataFrame(weak_segments)
@@ -62,7 +64,7 @@ def build_weak_label_csv(prepared: PreparedData) -> pd.DataFrame:
     acc_weak = prepared.acc_video.copy()
     acc_weak["time"] = pd.to_datetime(acc_weak["time"])
     acc_weak["state"] = LABEL_TO_STATE["Still"]
-    acc_weak["weak_label"] = "Still"
+    acc_weak["manual_label"] = "Still"
     priority_buffer = np.zeros(len(acc_weak), dtype=int)
 
     for row in weak_df.itertuples(index=False):
@@ -76,23 +78,25 @@ def build_weak_label_csv(prepared: PreparedData) -> pd.DataFrame:
             continue
         priority_buffer[update_mask] = priority
         acc_weak.loc[update_mask, "state"] = LABEL_TO_STATE[row.category]
-        acc_weak.loc[update_mask, "weak_label"] = row.category
+        acc_weak.loc[update_mask, "manual_label"] = row.category
 
     acc_weak["video_name"] = config.video_name
-    acc_weak = acc_weak[["time", "x", "y", "z", "state", "weak_label", "video_name"]]
-    acc_weak.to_csv(config.weak_label_output, index=False)
+    acc_weak = acc_weak[["time", "x", "y", "z", "state", "manual_label", "video_name"]]
+    acc_weak.to_csv(config.manual_label_output, index=False)
     return acc_weak
 
 
 def summarize_weak_labels(prepared: PreparedData, acc_weak: pd.DataFrame) -> None:
     print(f"Weak label input: {prepared.config.weak_label_input}")
-    print(f"Weak label output: {prepared.config.weak_label_output}")
+    print(f"Manual label output: {prepared.config.manual_label_output}")
     print(f"Video range: {prepared.video_start} -> {prepared.video_end}")
     print(f"ACC rows labeled: {len(acc_weak)}")
-    print(acc_weak["weak_label"].value_counts().sort_index())
+    print(acc_weak["manual_label"].value_counts().sort_index().rename_axis("manual_label"))
 
 
 def plot_weak_label_overlay(prepared: PreparedData, acc_weak: pd.DataFrame) -> Path:
+    if prepared.config.manual_label_overlay_png is None:
+        raise ValueError("Manual label overlay path has not been initialized. Run prepare_video_aligned_data first.")
     acc_video = prepared.acc_video.copy()
     acc_video["time_rel_s"] = (acc_video["time"] - prepared.video_start).dt.total_seconds()
     weak_df = acc_weak.copy().sort_values("time").reset_index(drop=True)
@@ -102,8 +106,8 @@ def plot_weak_label_overlay(prepared: PreparedData, acc_weak: pd.DataFrame) -> P
     if not weak_df.empty:
         start_idx = 0
         for i in range(1, len(weak_df) + 1):
-            if i == len(weak_df) or weak_df.loc[i, "weak_label"] != weak_df.loc[i - 1, "weak_label"]:
-                weak_runs.append((weak_df.loc[start_idx, "time_rel_s"], weak_df.loc[i - 1, "time_rel_s"], weak_df.loc[i - 1, "weak_label"]))
+            if i == len(weak_df) or weak_df.loc[i, "manual_label"] != weak_df.loc[i - 1, "manual_label"]:
+                weak_runs.append((weak_df.loc[start_idx, "time_rel_s"], weak_df.loc[i - 1, "time_rel_s"], weak_df.loc[i - 1, "manual_label"]))
                 start_idx = i
 
     plt.style.use("default")
@@ -128,8 +132,8 @@ def plot_weak_label_overlay(prepared: PreparedData, acc_weak: pd.DataFrame) -> P
     line_handles, line_labels = ax.get_legend_handles_labels()
     ax.legend(line_handles + legend_handles, line_labels + [STATE_TO_NAME[s] for s in [0, 1, 2, 3, 4]], loc="upper right", ncol=3)
 
-    prepared.config.weak_label_overlay_png.parent.mkdir(parents=True, exist_ok=True)
+    prepared.config.manual_label_overlay_png.parent.mkdir(parents=True, exist_ok=True)
     fig.tight_layout()
-    fig.savefig(prepared.config.weak_label_overlay_png, dpi=200, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
+    fig.savefig(prepared.config.manual_label_overlay_png, dpi=200, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
-    return prepared.config.weak_label_overlay_png
+    return prepared.config.manual_label_overlay_png

@@ -23,6 +23,8 @@ class PreparedData:
     acc_resampled: pd.DataFrame
     acc_video: pd.DataFrame
     window_index_df: pd.DataFrame
+    batch_name: str
+    batch_dir: Path
 
 
 def parse_time_column(series: pd.Series) -> pd.Series:
@@ -105,6 +107,7 @@ def prepare_video_aligned_data(config: PipelineConfig) -> PreparedData:
     acc_video.to_csv(config.acc_video_csv, index=False)
     window_index_df = split_windows(acc_video, config.window_size, config.stride_size)
     window_index_df.to_csv(config.window_index_csv, index=False)
+    config.initialize_batch_paths(len(window_index_df))
 
     return PreparedData(
         config=config,
@@ -118,6 +121,8 @@ def prepare_video_aligned_data(config: PipelineConfig) -> PreparedData:
         acc_resampled=acc_resampled,
         acc_video=acc_video,
         window_index_df=window_index_df,
+        batch_name=config.batch_name,
+        batch_dir=config.batch_dir,
     )
 
 
@@ -127,5 +132,6 @@ def summarize_prepared_data(prepared: PreparedData) -> None:
     print(f"Video metadata JSON: {prepared.video_metadata_file}")
     print(f"ACC video subset saved to: {prepared.config.acc_video_csv}")
     print(f"Window index saved to: {prepared.config.window_index_csv}")
+    print(f"Batch directory: {prepared.batch_dir}")
     print(f"Video range: {prepared.video_start} -> {prepared.video_end}")
     print(f"Video-subset windows: {len(prepared.window_index_df)}")
